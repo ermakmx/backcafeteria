@@ -1,0 +1,64 @@
+###
+
+GET http://localhost:3000/api/producto HTTP/1.1
+###
+
+GET http://localhost:3000/api/usuario HTTP/1.1
+
+###
+
+GET http://localhost:3000/api/categoria HTTP/1.1
+###
+
+POST http://localhost:3000/api/usuario HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "juan lopez",
+    "email": "juan@juan.com",
+    "password": "123",
+    "role": "USER_ROLE"
+}
+
+
+###
+
+POST http://localhost:3000/api/categoria HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Pirateria",
+    "usuario": "5fd16fa21f7223301c00a53a"
+}
+
+
+###
+
+POST http://localhost:3000/api/producto HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "Dvd pirata",
+    "precioUni": "10",
+    "usuario": "5fd16fa21f7223301c00a53a",
+    "categoria": "5fd1714a19f44930d4345024"
+}
+
+### 
+
+GET http://localhost:3000/api/employees/5b0624a7abcb202a3af189b6 HTTP/1.1
+
+###
+
+PUT http://localhost:3000/api/employees/5b0624a7abcb202a3af189b6
+Content-Type: application/json
+
+{
+    "name": "Joe McMillan",
+    "position": "Digital Marketing Manager",
+    "office": "California",
+    "salary": "20000"
+}
+
+###
+DELETE http://localhost:3000/api/employees/5b0627e6edb8f82dcc1486ff
